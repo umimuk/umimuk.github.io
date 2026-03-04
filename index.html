@@ -35,23 +35,22 @@
     header {
       background: linear-gradient(135deg, #a0e8ff 0%, #c8f2ff 100%);
       color: var(--text);
-      padding: 64px 24px 56px;
+      padding: 52px 24px 48px;
       text-align: center;
     }
 
-    .hero-name {
-      font-size: 2.8rem;
-      font-weight: 700;
-      letter-spacing: 0.04em;
-      margin-bottom: 12px;
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to   { opacity: 1; transform: translateY(0); }
     }
 
-    .hero-tagline {
-      font-size: 1.1rem;
-      font-weight: 500;
-      opacity: 0.75;
-      margin-bottom: 28px;
-      letter-spacing: 0.06em;
+    .hero-logo {
+      width: 460px;
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto 28px;
+      animation: fadeIn 0.7s ease both;
     }
 
     .hero-links {
@@ -221,12 +220,8 @@
 
     /* ===== RESPONSIVE ===== */
     @media (max-width: 768px) {
-      .hero-name {
-        font-size: 2.2rem;
-      }
-
-      .hero-tagline {
-        font-size: 1rem;
+      .hero-logo {
+        width: 300px;
       }
 
       main {
@@ -245,8 +240,7 @@
 
   <!-- HEADER / HERO -->
   <header>
-    <p class="hero-name">いと</p>
-    <p class="hero-tagline">AI × 〇〇</p>
+    <img class="hero-logo" src="logo-header.png" alt="ロゴ">
     <div class="hero-links">
       <a class="btn-outline" href="https://x.com/ito_itoai" target="_blank" rel="noopener noreferrer">
         <svg class="icon-x" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
