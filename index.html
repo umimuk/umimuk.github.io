@@ -38,7 +38,7 @@
     header {
       background: linear-gradient(135deg, #a0e8ff 0%, #c8f2ff 100%);
       color: var(--text);
-      padding: clamp(20px, 4vh, 52px) 24px clamp(18px, 3.5vh, 48px);
+      padding: 12px 16px 10px;
       text-align: center;
     }
 
@@ -49,18 +49,18 @@
 
     /* デフォルト：中〜大画面（1025px〜1919px） */
     .hero-logo {
-      width: clamp(340px, 30vw, 420px);
+      width: clamp(400px, 55vw, 600px);
       max-width: 90%;
       height: auto;
       display: block;
-      margin: 0 auto clamp(14px, 2.5vh, 28px);
+      margin: 0 auto 10px;
       animation: fadeIn 0.7s ease both;
     }
 
     .hero-links {
       display: flex;
       justify-content: center;
-      gap: 10px;
+      gap: 8px;
       flex-wrap: wrap;
     }
 
@@ -71,9 +71,9 @@
       border: 1px solid rgba(44,62,80,0.35);
       color: var(--text);
       text-decoration: none;
-      padding: 4px 12px;
+      padding: 3px 10px;
       border-radius: 24px;
-      font-size: 0.78rem;
+      font-size: 0.72rem;
       font-weight: 500;
       transition: background 0.2s, border-color 0.2s;
     }
@@ -195,8 +195,8 @@
       background: linear-gradient(135deg, #7dcef5 0%, #a0e8ff 100%);
       color: var(--text);
       text-align: center;
-      padding: clamp(18px, 2.5vh, 32px) 24px;
-      margin-top: clamp(20px, 3.5vh, 60px);
+      padding: clamp(10px, 1.5vh, 20px) 24px;
+      margin-top: clamp(10px, 2vh, 32px);
     }
 
     .footer-links {
@@ -227,22 +227,22 @@
 
     /* 大画面 ≥1920px */
     @media (min-width: 1920px) {
-      .hero-logo { width: 455px; }
+      .hero-logo { width: 600px; }
       main { max-width: 1300px; }
     }
 
     /* タブレット 768px〜1024px：1列 */
     @media (max-width: 1024px) {
-      .hero-logo { width: clamp(300px, 40vw, 380px); }
+      .hero-logo { width: clamp(320px, 75vw, 520px); }
       .works-grid { grid-template-columns: 1fr; }
       main { max-width: 640px; }
     }
 
     /* スマホ ≤767px */
     @media (max-width: 767px) {
-      .hero-logo { width: clamp(220px, 60vw, 300px); }
-      main { padding: clamp(18px, 3vh, 28px) 16px; }
-      .btn-outline { padding: 4px 10px; font-size: 0.75rem; }
+      .hero-logo { width: clamp(260px, 85vw, 380px); }
+      main { padding: clamp(14px, 2.5vh, 24px) 16px; }
+      .btn-outline { padding: 3px 9px; font-size: 0.72rem; }
       .card { padding: 14px 14px; gap: 8px; }
       .footer-links { gap: 14px; }
     }
