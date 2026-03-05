@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>いとのポートフォリオ</title>
+  <title>作品一覧 - いとのポートフォリオ</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
@@ -34,8 +34,6 @@
 
   <!-- MAIN -->
   <main>
-
-    <!-- WORKS SECTION -->
     <section>
       <h2 class="section-title">作品一覧</h2>
       <div class="works-grid">
@@ -72,19 +70,6 @@
         </div>
       </div>
     </section>
-
-    <!-- PROFILE SECTION -->
-    <section>
-      <h2 class="section-title">プロフィール</h2>
-      <div class="profile-text">
-        <p>AIで遊びながら稼ぐクリエイター「いと」です。</p>
-        <p>ChatGPTから世代交代、今はClaude Codeを使ってゲーム・ツール・コンテンツを爆速で作っています。</p>
-        <p>月もので辛い日に3時間で「ねこモグラたたき」を作ったり、広告で見たテトリスが気になって「ぷよリス」を作ったり。思いついたらすぐ形にする。</p>
-        <p>AIと遊んだことを発信中（<a href="https://x.com/ito_itoai" target="_blank" rel="noopener noreferrer">@ito_itoai</a>）<br>
-        遊びを資産化して、誰でもAIで副業できる世界を目指してます。</p>
-      </div>
-    </section>
-
   </main>
 
   <!-- FOOTER -->
@@ -98,5 +83,23 @@
     <p class="footer-copy">&copy; 2024 ito. All rights reserved.</p>
   </footer>
 
+  <script>
+    (function () {
+      var btn = document.querySelector('.hamburger');
+      var nav = document.querySelector('.site-nav');
+      btn.addEventListener('click', function () {
+        var open = btn.classList.toggle('is-open');
+        nav.classList.toggle('is-open');
+        btn.setAttribute('aria-expanded', open);
+      });
+      nav.querySelectorAll('a').forEach(function (a) {
+        a.addEventListener('click', function () {
+          btn.classList.remove('is-open');
+          nav.classList.remove('is-open');
+          btn.setAttribute('aria-expanded', 'false');
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
